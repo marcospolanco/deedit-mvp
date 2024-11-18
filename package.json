@@ -20,6 +20,7 @@
     "@upstash/ratelimit": "^1.0.1",
     "@upstash/redis": "^1.29.0",
     "@vercel/postgres": "^0.7.2",
+    "antd": "^5.22.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "drizzle-orm": "^0.29.4",
