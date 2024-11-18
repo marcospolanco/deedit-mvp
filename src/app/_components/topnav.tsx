@@ -11,7 +11,7 @@ export function TopNav() {
           <SignInButton />
         </SignedOut>
         <SignedIn>
-          <SimpleUploadButton />
+          {/* <SimpleUploadButton /> */}
           <UserButton />
         </SignedIn>
       </div>

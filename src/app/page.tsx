@@ -1,8 +1,11 @@
+
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { getMyImages } from "~/server/queries";
 import {TimePicker} from "antd";
+import dayjs from "dayjs";
+import { TimezoneSelect } from "~/components/ui/TimezoneSelect";
 
 export const dynamic = "force-dynamic";
 
@@ -66,6 +69,10 @@ async function Images() {
   );
 }
 
+//time format
+const format = 'HH:mm A';
+const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
 export default async function HomePage() {
   return (
     <main className="">
@@ -75,11 +82,17 @@ export default async function HomePage() {
         </div>
       </SignedOut>
       <SignedIn>
-        <div className="bg-white shadow-md rounded-lg p-2 max-w-xs mx-auto">
-            <img src={book.cover} alt={book.title} className="rounded-t-lg" />
-            <div className="p-4">
-                <p className="text-gray-600 mt-2 italic">{`"${book.quote}"`}</p>
-                <p className="text-gray-600 mt-2 font-semibold">{book.author}</p>
+        <div className="justify-center pt-8">
+          <div className="bg-white shadow-md rounded-lg p-2 max-w-xs mx-auto">
+              <img src={book.cover} alt={book.title} className="rounded-t-lg" />
+              <div className="p-4">
+                  <p className="text-gray-600 mt-2 italic">{`"${book.quote}"`}</p>
+                  <p className="text-gray-600 mt-2 font-semibold">{book.author}</p>
+              </div>
+          </div>
+            <div className="flex pt-8 justify-center text-gray-600">
+              <TimePicker minuteStep={15} hourStep={1} format={format} />
+              <TimezoneSelect value={timezone}/>
             </div>
         </div>
       </SignedIn>
