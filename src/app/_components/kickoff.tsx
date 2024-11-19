@@ -1,12 +1,26 @@
 "use client";
+import { useState } from "react";
+import { useUser } from "@clerk/nextjs";
+
+
 export const KickItOff = () => {
-  return (
+    const [isLoading, setIsLoading] = useState(false);
+
+    const { user } = useUser();
+
+    const phoneNumber = user?.primaryPhoneNumber?.phoneNumber;
+
+    return (
     <div className="flex pt-8 justify-center text-gray-600">
       <button 
-        onClick={() => initiateCall("+17875295892")}
+        onClick={() => {
+          setIsLoading(true);
+            initiateCall(phoneNumber);
+          setTimeout(() => setIsLoading(false), 3000);
+        }}
         className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
       >
-        Kick it off with Dee
+        {isLoading ? "Calling..." : "Kick it off with Dee"}
       </button>
     </div>
   );
