@@ -7,11 +7,7 @@ export function TopNav() {
       <div>Deedit</div>
 
       <div className="flex flex-row items-center gap-4">
-        <SignedOut>
-          <SignInButton />
-        </SignedOut>
         <SignedIn>
-          {/* <SimpleUploadButton /> */}
           <UserButton />
         </SignedIn>
       </div>
