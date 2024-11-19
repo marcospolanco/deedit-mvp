@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getMyImages } from "~/server/queries";
 import { TimePicker } from "antd";
 import { TimezoneSelect } from "~/components/ui/TimezoneSelect";
+import { KickItOff } from "./_components/kickoff";
 
 export const dynamic = "force-dynamic";
 
@@ -39,6 +40,7 @@ const books = [
     "quote": "The state of focus is the gateway to achieving anything worthwhile. Devote yourself to what is in front of you, and you’ll unlock your potential."
   }
 ];
+
 
 // Move the random book selection inside the component to ensure it's executed at render time
 const getRandomBook = () => books[Math.floor(Math.random() * books.length)];
@@ -84,14 +86,14 @@ export default function HomePage() {
     <main className="">
       <SignedOut>
         <div className="h-full w-full text-center text-2xl">
-              <div className="flex flex-col items-center pt-8 gap-6">
+          <div className="flex flex-col items-center pt-8 gap-6">
             <img 
               src="https://utfs.io/f/WJjSPLaJDmw9pCpGpgxRckA98MzQb53CuBftjgvNmYloeW1n" 
               alt="Please sign in above" 
               className="rounded-lg mb-4" 
               style={{ width: '200px', height: 'auto' }} 
             />
-                <p>Let&apos;s make it great day. - Dee</p>
+            <p>Let&apos;s make it great day. - Dee</p>
             <BeautifulSignInButton />
           </div>
         </div>
@@ -99,19 +101,15 @@ export default function HomePage() {
       <SignedIn>
         <div className="justify-center pt-8">
           <div className="bg-white shadow-md rounded-lg p-2 max-w-xs mx-auto flex">
-              <img src={book.cover} alt={book.title} className="rounded-t-lg w-1/3 object-contain" />
-              <div className="p-4">
-                  <p className="text-gray-600 mt-2 italic">{`"${book.quote}"`}</p>
-                  <p className="text-gray-600 mt-2 font-semibold">{book.author}</p>
-              </div>
-          </div>
-            <div className="flex pt-8 justify-center text-gray-600">
-              <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
-                Kick it off with Dee
-              </button>
+            <img src={book?.cover} alt={book?.title} className="rounded-t-lg w-1/3 object-contain" />
+            <div className="p-4">
+              <p className="text-gray-600 mt-2 italic">{`"${book?.quote}"`}</p>
+              <p className="text-gray-600 mt-2 font-semibold">{book?.author}</p>
             </div>
+          </div>
         </div>
-      </SignedIn>
+        <KickItOff />
+        </SignedIn>
     </main>
   );
 }
