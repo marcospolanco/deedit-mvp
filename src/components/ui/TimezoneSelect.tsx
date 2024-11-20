@@ -22,7 +22,7 @@ export const TimezoneSelect = () => {
                     <tbody>
                         <tr>
                             <td>
-                                <div className="mb-2">What&apos;s your timezone?</div>
+                                <div className="mb-2 text-center">What&apos;s your timezone?</div>
                             </td>
                         </tr>
                         <tr>
