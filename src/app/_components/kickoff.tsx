@@ -34,7 +34,7 @@ export interface VapiResponse {
     // Define the expected structure of the response here
     // For example:
     success: boolean;
-    message: string;
+    // message: string;
     // Add other relevant fields
   }
   
@@ -65,11 +65,11 @@ export interface VapiResponse {
     if (!response.ok) {
         console.log(process.env);
     //   throw new Error(`VAPI call failed: ${response.statusText}`);
-    return {}
+    return {success:false};
     }
   
-    const data = await response.json();
+    const data: unknown = await response.json();
     console.log('Call initiated:', data);
       
-    return data;
+    return {success: true};
    }

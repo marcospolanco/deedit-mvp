@@ -6,7 +6,7 @@ export function TopNav() {
     <nav className="flex w-full items-center justify-between border-b p-4 text-xl font-semibold">
       <div>
         <img 
-          src="/images/deedit_logo_smaller.png" 
+          src="https://utfs.io/f/WJjSPLaJDmw9hcxZtYHOBZQwMk8IHxmTDVj207z5RLFSfAcP" 
           alt="Deedit Logo"
           className="h-8 w-auto"
         />
