@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { useUser } from "@clerk/nextjs";
-
-
+import { User } from "@clerk/nextjs/server";
+import { UserResource } from "@clerk/types";
 export const KickItOff = () => {
     const [isLoading, setIsLoading] = useState(false);
 
@@ -15,7 +15,7 @@ export const KickItOff = () => {
       <button 
         onClick={() => {
           setIsLoading(true);
-            void initiateCall(user, phoneNumber!);
+            void initiateCall(user?.firstName ?? "", user?.unsafeMetadata?.timezone as string ?? "", phoneNumber ?? "");
           setTimeout(() => setIsLoading(false), 3000);
         }}
         className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
@@ -38,21 +38,24 @@ export interface VapiResponse {
     // Add other relevant fields
   }
   
-  export async function initiateCall(user: any, phoneNumber: string): Promise<VapiResponse> {  
+  export async function initiateCall(firstName: string, timezone:string, phoneNumber: string): Promise<VapiResponse> {  
+
+    /* eslint-disable */
     const vapiRequestBody = {
       phoneNumberId: NEXT_PUBLIC_VAPI_PHONE_NUMBER_ID,
       customer: {
-        number: `${phoneNumber}`,
-        name: user?.firstName,
+        number: phoneNumber,
+        name: firstName,
         extension: "",
       }, assistantOverrides: {
-        variableValues:{
-          "caller": user?.firstName,
-          "timezone": user?.unsafeMetadata?.timezone
+        variableValues: {
+          "caller": firstName,
+          "timezone": timezone
         }
       }, assistantId: NEXT_PUBLIC_VAPI_ASSISTANT_ID,
     };
-  
+      /* eslint-enable */
+
     const headers = {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${NEXT_PUBLIC_VAPI_AUTH_TOKEN}`,
@@ -73,7 +76,7 @@ export interface VapiResponse {
     }
   
     const data: unknown = await response.json();
-    console.log('Call initiated:', data);
+    // console.log('Call initiated:', data);
       
     return {success: true};
    }

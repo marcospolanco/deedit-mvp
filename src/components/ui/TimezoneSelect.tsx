@@ -20,11 +20,13 @@ export const TimezoneSelect = () => {
         const updateTimezone = async () => {
             try {
 
-                await user?.update({
-                    unsafeMetadata: {
-                        timezone: timezone
-                    }
-                });
+                if (user?.unsafeMetadata?.timezone !== timezone) {
+                    await user?.update({
+                        unsafeMetadata: {
+                            timezone: timezone
+                        }
+                    });
+                }
                 // await fetch('http://localhost:10000/api/user_timezone', {
                 await fetch('https://flowent-srv.onrender.com/api/user_timezone', {
                         method: 'POST',

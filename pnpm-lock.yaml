@@ -8,6 +8,9 @@ dependencies:
   '@clerk/nextjs':
     specifier: 5.0.0-beta.38
     version: 5.0.0-beta.38(eslint@8.57.0)(next@15.0.4-canary.19)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.3)
+  '@clerk/types':
+    specifier: ^4.34.0
+    version: 4.34.0
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.73)(react@18.2.0)
@@ -312,6 +315,13 @@ packages:
 
   /@clerk/types@4.0.0-beta.22:
     resolution: {integrity: sha512-ynhch0zB7LfRmMwZXv6WSLf0OEE8Kd01k1j3PNV7yAQIdx0k4a6wysaEv88U2nNYOcjk0xWjWknomZPB7RhIVQ==}
+    engines: {node: '>=18.17.0'}
+    dependencies:
+      csstype: 3.1.1
+    dev: false
+
+  /@clerk/types@4.34.0:
+    resolution: {integrity: sha512-4ghDvf80/sFlpx5HnmIl3vW7SOqEaTDwyKAw64H/E2ahgGUMk+qLVpxnBumTpowq+bGjfMVwbneDQOhtmYidoQ==}
     engines: {node: '>=18.17.0'}
     dependencies:
       csstype: 3.1.1
