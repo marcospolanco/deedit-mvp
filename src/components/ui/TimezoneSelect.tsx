@@ -32,7 +32,7 @@ export const TimezoneSelect = () => {
             }
         };
 
-        updateTimezone();
+        void updateTimezone();
     }, [timezone, user]);
 
     
