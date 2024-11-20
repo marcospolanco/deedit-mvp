@@ -19,8 +19,8 @@ export const TimezoneSelect = () => {
         const emailAddress = user?.primaryEmailAddress?.emailAddress;
         const updateTimezone = async () => {
             try {
-                await fetch('http://localhost:10000/api/user_timezone', {
-                // await fetch('https://flowent-srv.onrender.com/api/user_timezone', {
+                // await fetch('http://localhost:10000/api/user_timezone', {
+                await fetch('https://flowent-srv.onrender.com/api/user_timezone', {
                         method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
