@@ -110,7 +110,7 @@ export default function HomePage() {
         </div>
         <TimezoneSelect />
         <KickItOff />
-        </SignedIn>
+      </SignedIn>
     </main>
   );
 }
