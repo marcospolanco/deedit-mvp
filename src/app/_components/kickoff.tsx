@@ -15,7 +15,7 @@ export const KickItOff = () => {
       <button 
         onClick={() => {
           setIsLoading(true);
-            void initiateCall(phoneNumber!);
+            void initiateCall(user, phoneNumber!);
           setTimeout(() => setIsLoading(false), 3000);
         }}
         className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
@@ -38,15 +38,19 @@ export interface VapiResponse {
     // Add other relevant fields
   }
   
-  export async function initiateCall(phoneNumber: string): Promise<VapiResponse> {  
+  export async function initiateCall(user: any, phoneNumber: string): Promise<VapiResponse> {  
     const vapiRequestBody = {
       phoneNumberId: NEXT_PUBLIC_VAPI_PHONE_NUMBER_ID,
       customer: {
         number: `${phoneNumber}`,
-        name: "Eden",
+        name: user?.firstName,
         extension: "",
-      },
-      assistantId: NEXT_PUBLIC_VAPI_ASSISTANT_ID,
+      }, assistantOverrides: {
+        variableValues:{
+          "caller": user?.firstName,
+          "timezone": user?.unsafeMetadata?.timezone
+        }
+      }, assistantId: NEXT_PUBLIC_VAPI_ASSISTANT_ID,
     };
   
     const headers = {
