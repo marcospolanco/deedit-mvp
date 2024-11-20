@@ -1,5 +1,6 @@
 "use client";
 
+import { SignedIn } from '@clerk/nextjs';
 import React,{useState} from 'react';
 
 // interface TimezoneSelectProps {
@@ -14,20 +15,36 @@ export const TimezoneSelect = () => {
 
     return (
         // <div className="flex items-center gap-2 w-full sm:w-auto">
-        <div className="w-4 h-4 text-gray-600 flex-shrink-0">
-        {/* <select
-                // name="timezone"
-                value={timezone}
-                className="block sm:w-[200px] rounded-md border-gray-300 shadow-sm 
-                        bg-white py-2 pl-3 pr-10 text-sm focus:border-blue-500 
-                        focus:outline-none focus:ring-1 focus:ring-blue-500"
-                onChange = {setTimezone}
-                {timezones.map((tz) => (
-                <option key={tz} value={tz}>
-                    {tz.replace(/_/g, ' ')}
-                </option>
-                ))}>
-            </select> */}
+        <div className="flex justify-center items-center pt-8">
+            <SignedIn>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div className="mb-2">What&apos;s your timezone?</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select
+                                    value={timezone}
+                                    className="block sm:w-[200px] rounded-md border-gray-300 shadow-sm 
+                                            bg-white py-2 pl-3 pr-10 text-sm text-gray-800 focus:border-blue-500 
+                                            focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                    onChange={(e) => setTimezone(e.target.value)}
+                                >
+                                    {timezones.map((tz) => (
+                                        <option key={tz} value={tz}>
+                                            {tz.replace(/_/g, ' ')}
+                                        </option>
+                                    ))}
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </SignedIn>        
         </div>
     );
 };

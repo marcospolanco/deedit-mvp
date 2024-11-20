@@ -108,6 +108,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        <TimezoneSelect />
         <KickItOff />
         </SignedIn>
     </main>
