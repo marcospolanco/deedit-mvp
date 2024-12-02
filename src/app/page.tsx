@@ -52,7 +52,7 @@ const BeautifulSignInButton = () => {
     <div className="flex justify-center items-center">
       <SignInButton mode="modal">
         <button
-          className="bg-blue-400 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-300 flex items-center gap-2"
+          className="bg-[#4285F4] hover:bg-[#3367D6] text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-300 flex items-center gap-2"
         >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path
