@@ -85,15 +85,15 @@ export default function HomePage() {
   return (
     <main className="bg-[#ffe9bb]">
       <SignedOut>
-        <div className="h-full w-full text-center text-2xl">
+        <div className="h-full w-[80%] mx-auto text-center text-2xl flex items-center justify-center">
           <div className="flex flex-col items-center pt-8 gap-2">
-          <img src='https://utfs.io/f/WJjSPLaJDmw9CGPIFIuOHq2ldW1GRYgtVSwMLT3XzP4FDcQE' alt="Deedit Logo" className="h-20 w-auto" />
+          <img src='https://utfs.io/f/WJjSPLaJDmw9CGPIFIuOHq2ldW1GRYgtVSwMLT3XzP4FDcQE' alt="Deedit Logo" className="h-20 w-auto object-contain" />
           <div className="rounded-lg p-2 w-[70%] mx-auto flex">
               <div className="p-4">
             <p className="text-gray-600 italic font-['Merriweather_Sans'] text-[44px] font-normal leading-[20px] text-left decoration-skip-ink-none">{`"`}</p>
               <p className="text-gray-600 italic font-inter text-[28px] font-normal leading-[33.89px] text-center decoration-skip-ink-none">{`${book?.quote}`}</p>
               <p className="text-gray-600 italic font-['Merriweather_Sans'] text-[44px] font-normal leading-[50px] text-right decoration-skip-ink-none">{`"`}</p>
-              <img src={book?.cover} alt={book?.title} className="rounded-t-lg w-1/3 object-contain mx-auto" />
+              <img src={book?.cover} alt={book?.title} className="rounded-t-lg w-1/5 object-contain mx-auto" />
                 <p className="text-gray-600 mt-2 italic text-sm font-semibold">{`${book?.title}`}</p>
                 <p className="text-gray-600 mt-1 font-regular text-sm">by {book?.author}</p>
               </div>

@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata = {
   title: "Deedit",
   description: "AI for Personal Growth",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "/favicon.png" }],
 };
 
 export default function RootLayout({
