@@ -83,32 +83,41 @@ export default function HomePage() {
   const book = getRandomBook();
   
   return (
-    <main className="">
+    <main className="bg-[#ffe9bb]">
       <SignedOut>
         <div className="h-full w-full text-center text-2xl">
-          <div className="flex flex-col items-center pt-8 gap-6">
-            <img 
-              src="https://utfs.io/f/WJjSPLaJDmw9pCpGpgxRckA98MzQb53CuBftjgvNmYloeW1n" 
-              alt="Please sign in above" 
-              className="rounded-lg mb-4" 
-              style={{ width: '200px', height: 'auto' }} 
-            />
-            <p>Let&apos;s make it great day. - Dee</p>
+          <div className="flex flex-col items-center pt-8 gap-2">
+          <img src='https://utfs.io/f/WJjSPLaJDmw9CGPIFIuOHq2ldW1GRYgtVSwMLT3XzP4FDcQE' alt="Deedit Logo" className="h-20 w-auto" />
+          <div className="rounded-lg p-2 max-w-xs mx-auto flex">
+              <div className="p-4">
+            <p className="text-gray-600 italic font-['Merriweather_Sans'] text-[44px] font-normal leading-[20px] text-left decoration-skip-ink-none">{`"`}</p>
+              <p className="text-gray-600 italic font-inter text-[28px] font-normal leading-[33.89px] text-center decoration-skip-ink-none">{`${book?.quote}`}</p>
+              <p className="text-gray-600 italic font-['Merriweather_Sans'] text-[44px] font-normal leading-[50px] text-right decoration-skip-ink-none">{`"`}</p>
+              <img src={book?.cover} alt={book?.title} className="rounded-t-lg w-1/3 object-contain mx-auto" />
+                <p className="text-gray-600 mt-2 italic text-sm font-semibold">{`${book?.title}`}</p>
+                <p className="text-gray-600 mt-1 font-regular text-sm">by {book?.author}</p>
+              </div>
+            </div>
             <BeautifulSignInButton />
           </div>
         </div>
       </SignedOut>
       <SignedIn>
-        <div className="justify-center pt-8">
-          <div className="bg-white shadow-md rounded-lg p-2 max-w-xs mx-auto flex">
-            <img src={book?.cover} alt={book?.title} className="rounded-t-lg w-1/3 object-contain" />
-            <div className="p-4">
-              <p className="text-gray-600 mt-2 italic">{`"${book?.quote}"`}</p>
-              <p className="text-gray-600 mt-2 font-semibold">{book?.author}</p>
-            </div>
-          </div>
+ 
+        <div className="justify-center text-center items-center pt-8">
+          <p className="font-inter text-[28px] font-normal leading-[33.89px] text-center decoration-skip-ink-none mb-2">Hi! I&apos;m Dee.</p>
+          <img 
+                src="https://utfs.io/f/WJjSPLaJDmw9CKL8Q1OHq2ldW1GRYgtVSwMLT3XzP4FDcQEn" 
+                alt="Please sign in above" 
+                className="rounded-full mb-4 mx-auto block" 
+                style={{ width: '250px', height: 'auto' }}
+              />
         </div>
-        <TimezoneSelect />
+        <div className="text-2xl flex flex-col items-center">
+        <span className="font-inter text-[28px] font-normal leading-[33.89px] text-center decoration-skip-ink-none">
+          Let&apos;s get you started.
+        </span>
+      </div>
         <KickItOff />
       </SignedIn>
     </main>

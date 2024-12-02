@@ -12,15 +12,18 @@ export const KickItOff = () => {
 
     return (
     <div className="flex pt-8 justify-center text-gray-600">
+  
       <button 
         onClick={() => {
           setIsLoading(true);
             void initiateCall(user?.firstName ?? "", user?.unsafeMetadata?.timezone as string ?? "", phoneNumber ?? "");
           setTimeout(() => setIsLoading(false), 3000);
         }}
-        className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
+        className="bg-black text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
       >
-        {isLoading ? "Calling..." : "Kick it off with Dee"}
+        <span className="font-inter text-2xl font-semibold leading-[48px]">
+          {isLoading ? "Calling..." : "Set your daily call  🕓"}
+        </span>
       </button>
     </div>
   );
