@@ -88,7 +88,7 @@ export default function HomePage() {
         <div className="h-full w-full text-center text-2xl">
           <div className="flex flex-col items-center pt-8 gap-2">
           <img src='https://utfs.io/f/WJjSPLaJDmw9CGPIFIuOHq2ldW1GRYgtVSwMLT3XzP4FDcQE' alt="Deedit Logo" className="h-20 w-auto" />
-          <div className="rounded-lg p-2 max-w-xs mx-auto flex">
+          <div className="rounded-lg p-2 w-[70%] mx-auto flex">
               <div className="p-4">
             <p className="text-gray-600 italic font-['Merriweather_Sans'] text-[44px] font-normal leading-[20px] text-left decoration-skip-ink-none">{`"`}</p>
               <p className="text-gray-600 italic font-inter text-[28px] font-normal leading-[33.89px] text-center decoration-skip-ink-none">{`${book?.quote}`}</p>
