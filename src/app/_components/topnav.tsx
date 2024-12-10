@@ -14,7 +14,7 @@ export function TopNav() {
       </div>
 
       <div className="flex flex-row items-center gap-4">
-          <UserButton className="w-[10vw] max-w-[40px]" />
+          <UserButton appearance={{ elements: { avatarBox: "w-[10vw] h-[10vw] max-w-[40px] max-h-[40px]" } }} />
       </div>
       </SignedIn>
       </nav>
