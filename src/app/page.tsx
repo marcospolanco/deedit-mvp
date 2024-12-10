@@ -9,12 +9,12 @@ import { KickItOff } from "./_components/kickoff";
 export const dynamic = "force-dynamic";
 
 const books = [
-  // {
-  //   "title": "The One Thing",
-  //   "author": "Gary Keller and Jay Papasan",
-  //   "cover": "https://m.media-amazon.com/images/I/61aPPAPRiwL._AC_UF1000,1000_QL80_.jpg",
-  //   "quote": "Extraordinary results are directly determined by how narrow you can make your focus. You need to be doing fewer things for more effect instead of doing more things with side effects."
-  // },
+  {
+    "title": "The One Thing",
+    "author": "Gary Keller and Jay Papasan",
+    "cover": "https://m.media-amazon.com/images/I/61aPPAPRiwL._AC_UF1000,1000_QL80_.jpg",
+    "quote": "Extraordinary results are directly determined by how narrow you can make your focus. You need to be doing fewer things for more effect instead of doing more things with side effects."
+  },
   {
     "title": "Deep Work",
     "author": "Cal Newport",
@@ -33,12 +33,12 @@ const books = [
     "cover": "https://m.media-amazon.com/images/I/61QfKSGnwEL.jpg",
     "quote": "Remember that if you don’t prioritize your life, someone else will."
   },
-  // {
-  //   "title": "Hyperfocus",
-  //   "author": "Chris Bailey",
-  //   "cover": "https://m.media-amazon.com/images/I/71T62JOlQ9L._AC_UF1000,1000_QL80_.jpg",
-  //   "quote": "The state of focus is the gateway to achieving anything worthwhile. Devote yourself to what is in front of you, and you’ll unlock your potential."
-  // }
+  {
+    "title": "Hyperfocus",
+    "author": "Chris Bailey",
+    "cover": "https://m.media-amazon.com/images/I/71T62JOlQ9L._AC_UF1000,1000_QL80_.jpg",
+    "quote": "The state of focus is the gateway to achieving anything worthwhile. Devote yourself to what is in front of you, and you’ll unlock your potential."
+  }
 ];
 
 
@@ -86,9 +86,9 @@ export default function HomePage() {
     <main className="bg-[#ffe9bb]">
       <SignedOut>
         <div className="h-full w-[80%] mx-auto text-center text-2xl flex items-center justify-center">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center gap-2">
           <img src='https://utfs.io/f/WJjSPLaJDmw9CGPIFIuOHq2ldW1GRYgtVSwMLT3XzP4FDcQE' alt="Deedit Logo" className="w-[30vw] max-w-[120px] h-auto object-contain" />
-          <div className="rounded-lg p-2 w-[70%] mx-auto flex">
+          <div className="rounded-lg p-2 w-[100%] mx-auto flex">
               <div className="p-4">
             <p className="text-gray-600 italic font-['Merriweather_Sans'] text-[44px] font-normal leading-[20px] text-left decoration-skip-ink-none">{`"`}</p>
               <p className="text-gray-600 italic font-inter text-[28px] font-normal leading-[33.89px] text-center decoration-skip-ink-none">{`${book?.quote}`}</p>
