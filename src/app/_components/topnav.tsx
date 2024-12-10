@@ -9,12 +9,12 @@ export function TopNav() {
         <img 
           src="https://utfs.io/f/WJjSPLaJDmw9CGPIFIuOHq2ldW1GRYgtVSwMLT3XzP4FDcQE" 
           alt="Deedit Logo"
-          className="h-12 w-auto"
+          className="h-auto w-[20vw] max-w-[80px]"
         />
       </div>
 
       <div className="flex flex-row items-center gap-4">
-          <UserButton />
+          <UserButton className="w-[10vw] max-w-[40px]" />
       </div>
       </SignedIn>
       </nav>

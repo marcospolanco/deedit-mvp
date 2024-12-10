@@ -87,7 +87,7 @@ export default function HomePage() {
       <SignedOut>
         <div className="h-full w-[80%] mx-auto text-center text-2xl flex items-center justify-center">
           <div className="flex flex-col items-center pt-8 gap-2">
-          <img src='https://utfs.io/f/WJjSPLaJDmw9CGPIFIuOHq2ldW1GRYgtVSwMLT3XzP4FDcQE' alt="Deedit Logo" className="h-20 w-auto object-contain" />
+          <img src='https://utfs.io/f/WJjSPLaJDmw9CGPIFIuOHq2ldW1GRYgtVSwMLT3XzP4FDcQE' alt="Deedit Logo" className="w-[30vw] max-w-[120px] h-auto object-contain" />
           <div className="rounded-lg p-2 w-[70%] mx-auto flex">
               <div className="p-4">
             <p className="text-gray-600 italic font-['Merriweather_Sans'] text-[44px] font-normal leading-[20px] text-left decoration-skip-ink-none">{`"`}</p>
