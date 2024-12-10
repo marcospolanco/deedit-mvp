@@ -9,12 +9,12 @@ import { KickItOff } from "./_components/kickoff";
 export const dynamic = "force-dynamic";
 
 const books = [
-  {
-    "title": "The One Thing",
-    "author": "Gary Keller and Jay Papasan",
-    "cover": "https://m.media-amazon.com/images/I/61aPPAPRiwL._AC_UF1000,1000_QL80_.jpg",
-    "quote": "Extraordinary results are directly determined by how narrow you can make your focus. You need to be doing fewer things for more effect instead of doing more things with side effects."
-  },
+  // {
+  //   "title": "The One Thing",
+  //   "author": "Gary Keller and Jay Papasan",
+  //   "cover": "https://m.media-amazon.com/images/I/61aPPAPRiwL._AC_UF1000,1000_QL80_.jpg",
+  //   "quote": "Extraordinary results are directly determined by how narrow you can make your focus. You need to be doing fewer things for more effect instead of doing more things with side effects."
+  // },
   {
     "title": "Deep Work",
     "author": "Cal Newport",
@@ -33,12 +33,12 @@ const books = [
     "cover": "https://m.media-amazon.com/images/I/61QfKSGnwEL.jpg",
     "quote": "Remember that if you don’t prioritize your life, someone else will."
   },
-  {
-    "title": "Hyperfocus",
-    "author": "Chris Bailey",
-    "cover": "https://m.media-amazon.com/images/I/71T62JOlQ9L._AC_UF1000,1000_QL80_.jpg",
-    "quote": "The state of focus is the gateway to achieving anything worthwhile. Devote yourself to what is in front of you, and you’ll unlock your potential."
-  }
+  // {
+  //   "title": "Hyperfocus",
+  //   "author": "Chris Bailey",
+  //   "cover": "https://m.media-amazon.com/images/I/71T62JOlQ9L._AC_UF1000,1000_QL80_.jpg",
+  //   "quote": "The state of focus is the gateway to achieving anything worthwhile. Devote yourself to what is in front of you, and you’ll unlock your potential."
+  // }
 ];
 
 
