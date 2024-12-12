@@ -119,6 +119,9 @@ export default function HomePage() {
         </span>
       </div>
         <KickItOff />
+        <div className="text-center mt-4">
+          More info & Support <Link href="https://deedit.notion.site/Onboarding-Setup-your-morning-call-with-Dee-1570956f250f80c299d0dcecce46669a" target="_blank" rel="noopener noreferrer" className="text-[#2F2541] hover:text-[#624e88] font-semibold">HERE</Link>
+        </div>
         <div className="hidden">
           <TimezoneSelect />
         </div>

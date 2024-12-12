@@ -19,12 +19,15 @@ export const KickItOff = () => {
             void initiateCall(user?.firstName ?? "", user?.unsafeMetadata?.timezone as string ?? "", phoneNumber ?? "");
           setTimeout(() => setIsLoading(false), 3000);
         }}
-        className="bg-black text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
+        className="bg-[#2F2541] text-white font-bold py-2 px-4 rounded hover:bg-[#624e88] transition duration-300"
       >
         <span className="font-inter text-2xl font-semibold leading-[48px]">
           {isLoading ? "Calling..." : "Set your daily call  🕓"}
         </span>
+
       </button>
+      <p />
+
     </div>
   );
 }
