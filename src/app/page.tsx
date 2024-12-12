@@ -119,6 +119,9 @@ export default function HomePage() {
         </span>
       </div>
         <KickItOff />
+        <div className="hidden">
+          <TimezoneSelect />
+        </div>
       </SignedIn>
     </main>
   );
