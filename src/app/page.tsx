@@ -9,12 +9,7 @@ import { KickItOff } from "./_components/kickoff";
 export const dynamic = "force-dynamic";
 
 const books = [
-  {
-    "title": "The One Thing",
-    "author": "Gary Keller and Jay Papasan",
-    "cover": "https://m.media-amazon.com/images/I/61aPPAPRiwL._AC_UF1000,1000_QL80_.jpg",
-    "quote": "Extraordinary results are directly determined by how narrow you can make your focus. You need to be doing fewer things for more effect instead of doing more things with side effects."
-  },
+
   {
     "title": "Deep Work",
     "author": "Cal Newport",
@@ -32,12 +27,6 @@ const books = [
     "author": "Greg McKeown",
     "cover": "https://m.media-amazon.com/images/I/61QfKSGnwEL.jpg",
     "quote": "Remember that if you don’t prioritize your life, someone else will."
-  },
-  {
-    "title": "Hyperfocus",
-    "author": "Chris Bailey",
-    "cover": "https://m.media-amazon.com/images/I/71T62JOlQ9L._AC_UF1000,1000_QL80_.jpg",
-    "quote": "The state of focus is the gateway to achieving anything worthwhile. Devote yourself to what is in front of you, and you’ll unlock your potential."
   }
 ];
 
@@ -52,7 +41,7 @@ const BeautifulSignInButton = () => {
     <div className="flex justify-center items-center">
       <SignInButton mode="modal">
         <button
-          className="bg-[#4285F4] hover:bg-[#3367D6] text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-300 flex items-center gap-2"
+          className="bg-[#F2F2F2] hover:bg-[#3367D6] text-[#1F1F1F] text-[20px] font-roboto py-2 px-4 rounded-md shadow-md transition-all duration-300 flex items-center gap-2"
         >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path
@@ -83,19 +72,19 @@ export default function HomePage() {
   const book = getRandomBook();
   
   return (
-    <main className="bg-[#ffe9bb]">
+    <main className="bg-[#fffbe7]">
       <SignedOut>
-        <div className="h-full w-[80%] mx-auto text-center text-2xl flex items-center justify-center">
+        <div className="h-full w-[80%] max-w-[800px] mx-auto text-center text-2xl flex items-center justify-center">
           <div className="flex flex-col items-center gap-2">
-          <img src='https://utfs.io/f/WJjSPLaJDmw9CGPIFIuOHq2ldW1GRYgtVSwMLT3XzP4FDcQE' alt="Deedit Logo" className="w-[30vw] max-w-[120px] h-auto object-contain" />
+          <img src='images/Deedit_logo_purple_transp_wname_256.png' alt="Deedit Logo" className="w-[30vw] max-w-[100px] h-auto object-contain" />
           <div className="rounded-lg p-2 w-[100%] mx-auto flex">
               <div className="p-4">
-            <p className="text-gray-600 italic font-['Merriweather_Sans'] text-[44px] font-normal leading-[20px] text-left decoration-skip-ink-none">{`"`}</p>
-              <p className="text-gray-600 italic font-inter text-[28px] font-normal leading-[33.89px] text-center decoration-skip-ink-none">{`${book?.quote}`}</p>
-              <p className="text-gray-600 italic font-['Merriweather_Sans'] text-[44px] font-normal leading-[50px] text-right decoration-skip-ink-none">{`"`}</p>
-              <img src={book?.cover} alt={book?.title} className="rounded-t-lg w-1/5 object-contain mx-auto" />
-                <p className="text-gray-600 mt-2 italic text-sm font-semibold">{`${book?.title}`}</p>
-                <p className="text-gray-600 mt-1 font-regular text-sm">by {book?.author}</p>
+            <p className="text-gray-600 italic font-lato text-[40px] font-normal leading-[20px] text-left decoration-skip-ink-none">{`"`}</p>
+              <p className="text-gray-600 italic font-lato text-[24px] font-normal leading-[33.89px] text-center decoration-skip-ink-none">{`${book?.quote}`}</p>
+              <p className="text-gray-600 italic font-lato text-[40px] font-normal leading-[50px] text-right decoration-skip-ink-none">{`"`}</p>
+              <img src={book?.cover} alt={book?.title} className="rounded-t-lg w-1/4 object-contain mx-auto max-h-[250px]" />
+                <p className="text-gray-600 mt-2 italic text-sm font-lato font-semibold">{`${book?.title}`}</p>
+                <p className="text-gray-600 mt-1 font-lato text-sm">by {book?.author}</p>
               </div>
             </div>
             <BeautifulSignInButton />
