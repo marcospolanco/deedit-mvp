@@ -7,9 +7,9 @@ export function TopNav() {
         <SignedIn>
         <div>
         <img 
-          src="https://utfs.io/f/WJjSPLaJDmw9CGPIFIuOHq2ldW1GRYgtVSwMLT3XzP4FDcQE" 
+          src="images/Deedit_logo_purple_transp_wname_256.png"
           alt="Deedit Logo"
-          className="h-auto w-[20vw] max-w-[80px]"
+          className="h-auto w-[20vw] max-w-[70px]"
         />
       </div>
 
